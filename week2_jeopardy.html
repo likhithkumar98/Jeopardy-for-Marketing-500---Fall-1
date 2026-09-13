@@ -360,82 +360,157 @@ margin: 6px 0 4px; font-variant-numeric: tabular-nums;
 
 <script>
 const DATA = [
-  {
-    category: "Strategic Planning Fundamentals",
-    questions: [
-      { value:100, q:"The strategic planning process begins with:",
-        options:["Defining the company's mission","Launching a new advertising campaign","Setting the annual sales quota","Hiring a new sales team"], correct:0 },
-      { value:200, q:"A company's mission statement is best described as:",
-        options:["A short-term sales forecast","A broad statement of the organization's purpose and what it aims to accomplish in its environment","A detailed list of daily employee tasks","The company's tax filing status"], correct:1 },
-      { value:300, q:"Strategic objectives should be:",
-        options:["Vague and open to any interpretation","Set without any timeframe","Specific, measurable, and tied to the company's mission","Kept secret from all employees"], correct:2 },
-      { value:400, q:"In the planning process, after setting objectives, a company typically:",
-        options:["Immediately dissolves the planning team","Skips directly to filing annual reports","Ignores the external environment","Develops strategies and a plan to achieve those objectives"], correct:3 },
-      { value:500, q:"Strategic planning is best defined as:",
-        options:["The process of developing and maintaining a fit between an organization's objectives and resources and its changing market opportunities","A one-time event conducted only when a company is founded","A purely financial exercise unrelated to marketing","A plan that never needs to be revisited"], correct:0 }
-    ]
-  },
-  {
-    category: "Marketing Plan Elements & Implementation",
-    questions: [
-      { value:100, q:"A marketing plan typically includes:",
-        options:["Only the company's org chart","An executive summary, situation analysis, objectives, strategies, and budgets","Only a list of employee names","A single paragraph with no supporting detail"], correct:1 },
-      { value:200, q:"The 'situation analysis' section of a marketing plan:",
-        options:["Lists only future goals with no current data","Focuses solely on employee benefits","Reviews the current marketing situation, including the market, product, and competition","Is written after the plan has already been implemented"], correct:2 },
-      { value:300, q:"Marketing plan objectives should ideally be:",
-        options:["Impossible to measure","Left undefined until the plan is complete","Based only on competitor guesses","Clear, specific, and achievable within a defined time period"], correct:3 },
-      { value:400, q:"Implementation, in the context of a marketing plan, refers to:",
-        options:["The process of turning marketing strategies and plans into actions to accomplish objectives","Writing the mission statement only","Canceling the marketing plan","A step that occurs before objectives are set"], correct:0 },
-      { value:500, q:"One key challenge of implementation is:",
-        options:["Plans always implement themselves without management involvement","Coordinating people, resources, and processes so the plan is carried out as intended","There is never a need to monitor results","Implementation has no connection to the original strategy"], correct:1 }
-    ]
-  },
-  {
-    category: "The Marketing Environment",
-    questions: [
-      { value:100, q:"The marketing environment consists of:",
-        options:["Only the company's internal departments","Only the finance department's records","The actors and forces outside marketing that affect a company's ability to build relationships with customers","A single competitor's product line"], correct:2 },
-      { value:200, q:"The microenvironment includes forces such as:",
-        options:["National interest rates","Global political events","Broad cultural shifts in society","The company itself, suppliers, marketing intermediaries, customers, and competitors"], correct:3 },
-      { value:300, q:"The macroenvironment includes broader forces such as:",
-        options:["Demographic, economic, technological, political, and cultural forces","Only the company's suppliers","Only the sales department","A single customer's complaint"], correct:0 },
-      { value:400, q:"Demographic changes, such as an aging population, are important to marketers because they:",
-        options:["Have no effect on consumer demand","Can significantly shift demand for products and services over time","Only matter to government agencies","Cannot be measured or tracked"], correct:1 },
-      { value:500, q:"Marketing intermediaries in the microenvironment include organizations such as:",
-        options:["National regulatory agencies only","Foreign governments","Resellers, distributors, and marketing service agencies that help promote and sell a company's products","Competing companies only"], correct:2 }
-    ]
-  },
-  {
-    category: "Market Analysis Tools",
-    questions: [
-      { value:100, q:"A SWOT analysis is used to evaluate:",
-        options:["Only a company's financial statements","Only employee morale","Only advertising effectiveness","A company's Strengths, Weaknesses, Opportunities, and Threats"], correct:3 },
-      { value:200, q:"Environmental scanning is the process of:",
-        options:["Continuously gathering information about forces in the marketing environment to identify trends and issues","Reviewing only last year's sales figures","Designing a company's product packaging","Setting employee work schedules"], correct:0 },
-      { value:300, q:"The BCG growth-share matrix classifies business units based on:",
-        options:["Employee headcount and office location","Relative market share and market growth rate","Advertising spend and logo design","Customer service ratings only"], correct:1 },
-      { value:400, q:"Porter's Five Forces model helps a company analyze:",
-        options:["Internal employee satisfaction only","The company's mission statement","The competitive intensity and attractiveness of an industry","A single customer's purchase history"], correct:2 },
-      { value:500, q:"A key benefit of using market analysis tools like SWOT and Porter's Five Forces is that they:",
-        options:["Guarantee a company's success regardless of execution","Replace the need for a marketing plan entirely","Are only useful for very small businesses","Provide a structured way to assess internal and external factors before making strategic decisions"], correct:3 }
-    ]
-  },
-  {
-    category: "Segmentation, Targeting & Positioning",
-    questions: [
-      { value:100, q:"Market segmentation involves:",
-        options:["Dividing a broad market into smaller groups of buyers with distinct needs or characteristics","Treating every customer exactly the same","Reducing a company's total product offerings to one","Merging with a competing company"], correct:0 },
-      { value:200, q:"Target marketing is the process of:",
-        options:["Ignoring market research entirely","Evaluating market segments and selecting one or more to enter","Selling to every possible customer in every market","Setting a single fixed price for all products"], correct:1 },
-      { value:300, q:"Positioning refers to:",
-        options:["The geographic location of a company's headquarters","The order in which products are manufactured","Arranging for a product to occupy a clear, distinctive place relative to competing products in the minds of target consumers","The shipping method used for online orders"], correct:2 },
-      { value:400, q:"A perceptual (positioning) map is used to:",
-        options:["Track a company's quarterly revenue","Record employee attendance","Show a company's supply chain routes","Visually display consumer perceptions of brands relative to competitors on key attributes"], correct:3 },
-      { value:500, q:"Effective market segments should be measurable, accessible, substantial, and:",
-        options:["Differentiable and actionable, meaning segments respond differently to marketing efforts","Identical to every other segment","Impossible to reach with marketing communications","Based only on employee opinions"], correct:0 }
-    ]
-  }
+{
+category: "Strategic Planning Fundamentals",
+questions: [
+{ value:100, q:"The strategic planning process begins with:",
+options:["Launching a new advertising campaign","Setting the annual sales quota","Defining the company's mission","Hiring a new sales team"], k:"Vcu1NkCW5YAGXJSehCNW4y" },
+{ value:200, q:"A company's mission statement is best described as:",
+options:["The company's tax filing status","A detailed list of daily employee tasks","A short-term sales forecast","A broad statement of the organization's purpose and what it aims to accomplish in its environment"], k:"Yn41jsllC1A-I9CSZ4FbAz" },
+{ value:300, q:"Strategic objectives should be:",
+options:["Specific, measurable, and tied to the company's mission","Vague and open to any interpretation","Kept secret from all employees","Set without any timeframe"], k:"-T6kYdPI7JcerjK5KoIZyG" },
+{ value:400, q:"In the planning process, after setting objectives, a company typically:",
+options:["Develops strategies and a plan to achieve those objectives","Skips directly to filing annual reports","Immediately dissolves the planning team","Ignores the external environment"], k:"gNzQXl-JVKjsSexGalqT_4" },
+{ value:500, q:"Strategic planning is best defined as:",
+options:["The process of developing and maintaining a fit between an organization's objectives and resources and its changing market opportunities","A purely financial exercise unrelated to marketing","A plan that never needs to be revisited","A one-time event conducted only when a company is founded"], k:"f26hYrUCJCim-gwBYFnm1g" }
+]
+},
+{
+category: "Marketing Plan Elements & Implementation",
+questions: [
+{ value:100, q:"A marketing plan typically includes:",
+options:["Only a list of employee names","A single paragraph with no supporting detail","Only the company's org chart","An executive summary, situation analysis, objectives, strategies, and budgets"], k:"lou0-__y2pt_y6eP35VUpl" },
+{ value:200, q:"The 'situation analysis' section of a marketing plan:",
+options:["Reviews the current marketing situation, including the market, product, and competition","Focuses solely on employee benefits","Is written after the plan has already been implemented","Lists only future goals with no current data"], k:"8i5_KjCU2ZTsXLEhHHERoD" },
+{ value:300, q:"Marketing plan objectives should ideally be:",
+options:["Clear, specific, and achievable within a defined time period","Impossible to measure","Based only on competitor guesses","Left undefined until the plan is complete"], k:"he7lYMjpYQhdBDlx7tii8N" },
+{ value:400, q:"Implementation, in the context of a marketing plan, refers to:",
+options:["The process of turning marketing strategies and plans into actions to accomplish objectives","Writing the mission statement only","A step that occurs before objectives are set","Canceling the marketing plan"], k:"--eaIrb9XJfPXC7RXY7flx" },
+{ value:500, q:"One key challenge of implementation is:",
+options:["Coordinating people, resources, and processes so the plan is carried out as intended","Implementation has no connection to the original strategy","There is never a need to monitor results","Plans always implement themselves without management involvement"], k:"9DojU68fbLEypui-Naj9VP" }
+]
+},
+{
+category: "The Marketing Environment",
+questions: [
+{ value:100, q:"The marketing environment consists of:",
+options:["A single competitor's product line","Only the company's internal departments","The actors and forces outside marketing that affect a company's ability to build relationships with customers","Only the finance department's records"], k:"DGy82E_O8gUkET9APmPfXm" },
+{ value:200, q:"The microenvironment includes forces such as:",
+options:["The company itself, suppliers, marketing intermediaries, customers, and competitors","Broad cultural shifts in society","Global political events","National interest rates"], k:"Yvef0LEeaHSc14KhbDkWSP" },
+{ value:300, q:"The macroenvironment includes broader forces such as:",
+options:["Only the sales department","Demographic, economic, technological, political, and cultural forces","A single customer's complaint","Only the company's suppliers"], k:"5AQDo6Y7T_pO4dmigg5xYj" },
+{ value:400, q:"Demographic changes, such as an aging population, are important to marketers because they:",
+options:["Only matter to government agencies","Can significantly shift demand for products and services over time","Cannot be measured or tracked","Have no effect on consumer demand"], k:"sTX5G5te9GKSMid46iR1kC" },
+{ value:500, q:"Marketing intermediaries in the microenvironment include organizations such as:",
+options:["National regulatory agencies only","Foreign governments","Competing companies only","Resellers, distributors, and marketing service agencies that help promote and sell a company's products"], k:"WiwnMbro1Rma8SH_SX0SrM" }
+]
+},
+{
+category: "Market Analysis Tools",
+questions: [
+{ value:100, q:"A SWOT analysis is used to evaluate:",
+options:["Only a company's financial statements","A company's Strengths, Weaknesses, Opportunities, and Threats","Only employee morale","Only advertising effectiveness"], k:"6o7pZ8M15fbO6vgcu6LglT" },
+{ value:200, q:"Environmental scanning is the process of:",
+options:["Continuously gathering information about forces in the marketing environment to identify trends and issues","Setting employee work schedules","Reviewing only last year's sales figures","Designing a company's product packaging"], k:"bdpoMu5LZ08PbGFBZG75kZ" },
+{ value:300, q:"The BCG growth-share matrix classifies business units based on:",
+options:["Advertising spend and logo design","Relative market share and market growth rate","Customer service ratings only","Employee headcount and office location"], k:"kVeIxHBBqRE6b2UWqSHJWN" },
+{ value:400, q:"Porter's Five Forces model helps a company analyze:",
+options:["Internal employee satisfaction only","A single customer's purchase history","The company's mission statement","The competitive intensity and attractiveness of an industry"], k:"1bMHSflfuQJroc78ivVKP_" },
+{ value:500, q:"A key benefit of using market analysis tools like SWOT and Porter's Five Forces is that they:",
+options:["Are only useful for very small businesses","Provide a structured way to assess internal and external factors before making strategic decisions","Replace the need for a marketing plan entirely","Guarantee a company's success regardless of execution"], k:"zIjZ61gg_JRXBogVXMmkgd" }
+]
+},
+{
+category: "Segmentation, Targeting & Positioning",
+questions: [
+{ value:100, q:"Market segmentation involves:",
+options:["Reducing a company's total product offerings to one","Dividing a broad market into smaller groups of buyers with distinct needs or characteristics","Treating every customer exactly the same","Merging with a competing company"], k:"phTK_XGYx6IKwepGsDvp66" },
+{ value:200, q:"Target marketing is the process of:",
+options:["Setting a single fixed price for all products","Evaluating market segments and selecting one or more to enter","Ignoring market research entirely","Selling to every possible customer in every market"], k:"uMNQebGoPeZJ4mfEzng6Yd" },
+{ value:300, q:"Positioning refers to:",
+options:["The geographic location of a company's headquarters","The order in which products are manufactured","The shipping method used for online orders","Arranging for a product to occupy a clear, distinctive place relative to competing products in the minds of target consumers"], k:"saNz4m0IGF1t-kRWML9w7M" },
+{ value:400, q:"A perceptual (positioning) map is used to:",
+options:["Record employee attendance","Visually display consumer perceptions of brands relative to competitors on key attributes","Show a company's supply chain routes","Track a company's quarterly revenue"], k:"OJev0N0ez8cQID8m9ePbeb" },
+{ value:500, q:"Effective market segments should be measurable, accessible, substantial, and:",
+options:["Differentiable and actionable, meaning segments respond differently to marketing efforts","Identical to every other segment","Impossible to reach with marketing communications","Based only on employee opinions"], k:"_3G_aurVV9o-wXcbaoQSVs" }
+]
+}
 ];
+
+const _SALT = "MKT500-Jeopardy-v1";
+function _sha256b64url(str){
+  function rotr(n,x){return (x>>>n)|(x<<(32-n));}
+  function toWords(bytes){
+    const w=[];
+    for(let i=0;i<bytes.length;i+=4) w.push(((bytes[i]<<24)|(bytes[i+1]<<16)|(bytes[i+2]<<8)|bytes[i+3])>>>0);
+    return w;
+  }
+  const enc=new TextEncoder().encode(str);
+  const l=enc.length;
+  const bitLen=l*8;
+  const withOne=l+1;
+  const padLen=((withOne%64<=56)?56:120)-(withOne%64);
+  const total=withOne+padLen+8;
+  const bytes=new Uint8Array(total);
+  bytes.set(enc); bytes[l]=0x80;
+  const dv=new DataView(bytes.buffer);
+  // length as 64-bit big-endian (we only need low 32 for short strings)
+  dv.setUint32(total-4, bitLen>>>0, false);
+  const K=[
+  0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5,0x3956c25b,0x59f111f1,0x923f82a4,0xab1c5ed5,
+  0xd807aa98,0x12835b01,0x243185be,0x550c7dc3,0x72be5d74,0x80deb1fe,0x9bdc06a7,0xc19bf174,
+  0xe49b69c1,0xefbe4786,0x0fc19dc6,0x240ca1cc,0x2de92c6f,0x4a7484aa,0x5cb0a9dc,0x76f988da,
+  0x983e5152,0xa831c66d,0xb00327c8,0xbf597fc7,0xc6e00bf3,0xd5a79147,0x06ca6351,0x14292967,
+  0x27b70a85,0x2e1b2138,0x4d2c6dfc,0x53380d13,0x650a7354,0x766a0abb,0x81c2c92e,0x92722c85,
+  0xa2bfe8a1,0xa81a664b,0xc24b8b70,0xc76c51a3,0xd192e819,0xd6990624,0xf40e3585,0x106aa070,
+  0x19a4c116,0x1e376c08,0x2748774c,0x34b0bcb5,0x391c0cb3,0x4ed8aa4a,0x5b9cca4f,0x682e6ff3,
+  0x748f82ee,0x78a5636f,0x84c87814,0x8cc70208,0x90befffa,0xa4506ceb,0xbef9a3f7,0xc67178f2];
+  let H0=0x6a09e667,H1=0xbb67ae85,H2=0x3c6ef372,H3=0xa54ff53a,H4=0x510e527f,H5=0x9b05688c,H6=0x1f83d9ab,H7=0x5be0cd19;
+  for(let i=0;i<bytes.length;i+=64){
+    const w=new Array(64);
+    for(let j=0;j<16;j++) w[j]=dv.getUint32(i+j*4,false);
+    for(let j=16;j<64;j++){
+      const s0=rotr(7,w[j-15])^rotr(18,w[j-15])^(w[j-15]>>>3);
+      const s1=rotr(17,w[j-2])^rotr(19,w[j-2])^(w[j-2]>>>10);
+      w[j]=(w[j-16]+s0+w[j-7]+s1)>>>0;
+    }
+    let a=H0,b=H1,c=H2,d=H3,e=H4,f=H5,g=H6,h=H7;
+    for(let j=0;j<64;j++){
+      const S1=rotr(6,e)^rotr(11,e)^rotr(25,e);
+      const ch=(e&f)^((~e)&g);
+      const t1=(h+S1+ch+K[j]+w[j])>>>0;
+      const S0=rotr(2,a)^rotr(13,a)^rotr(22,a);
+      const maj=(a&b)^(a&c)^(b&c);
+      const t2=(S0+maj)>>>0;
+      h=g;g=f;f=e;e=(d+t1)>>>0;d=c;c=b;b=a;a=(t1+t2)>>>0;
+    }
+    H0=(H0+a)>>>0;H1=(H1+b)>>>0;H2=(H2+c)>>>0;H3=(H3+d)>>>0;
+    H4=(H4+e)>>>0;H5=(H5+f)>>>0;H6=(H6+g)>>>0;H7=(H7+h)>>>0;
+  }
+  const out=new Uint8Array(32);
+  const o=new DataView(out.buffer);
+  o.setUint32(0,H0);o.setUint32(4,H1);o.setUint32(8,H2);o.setUint32(12,H3);
+  o.setUint32(16,H4);o.setUint32(20,H5);o.setUint32(24,H6);o.setUint32(28,H7);
+  let s='';
+  const alphabet='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_';
+  for(let i=0;i<out.length;i+=3){
+    const x=(out[i]<<16)|((out[i+1]||0)<<8)|(out[i+2]||0);
+    s+=alphabet[(x>>18)&63]+alphabet[(x>>12)&63]+alphabet[(x>>6)&63]+alphabet[x&63];
+  }
+  return s.slice(0, Math.ceil(32*4/3)); // full base64url without pad trim later
+}
+function _tok(text){
+  return _sha256b64url(_SALT + '\0' + text).slice(0, 22);
+}
+function _isCorrect(optionText, token){
+  return _tok(optionText) === token;
+}
+function _correctIndex(q){
+  for(let i=0;i<q.options.length;i++){
+    if(_isCorrect(q.options[i], q.k)) return i;
+  }
+  return -1;
+}
 
 const TOTAL_CLUES = DATA.reduce((n,c)=> n + c.questions.length, 0);
 
@@ -620,14 +695,15 @@ function openModal(ci, qi){
 function selectAnswer(idx, q, el, container){
   Array.from(container.children).forEach(c => c.classList.add('locked'));
   const feedback = document.getElementById('modalFeedback');
-  if(idx === q.correct){
+  const right = _correctIndex(q);
+  if(idx === right){
     el.classList.add('correct');
     score += q.value;
     feedback.textContent = 'Correct! +$' + q.value;
     feedback.className = 'feedback correct-text';
   } else {
     el.classList.add('wrong');
-    Array.from(container.children)[q.correct].classList.add('correct');
+    if(right >= 0) Array.from(container.children)[right].classList.add('correct');
     score -= q.value;
     feedback.textContent = 'Not quite. -$' + q.value;
     feedback.className = 'feedback wrong-text';
@@ -651,6 +727,203 @@ function maybeShowFinish(){
     document.getElementById('finishOverlay').classList.add('open');
   }
 }
+
+function updatePlayerLabel(){
+  const el = document.getElementById('currentPlayerLabel');
+  el.innerHTML = '';
+  el.appendChild(document.createTextNode(currentName || '\u2014'));
+  if(currentClass){
+    const c = document.createElement('span');
+    c.className = 'pt-class';
+    c.textContent = '  \u00b7  ' + currentClass;
+    el.appendChild(c);
+  }
+}
+function validateGate(){
+  const n = document.getElementById('playerName').value.trim();
+  const c = document.getElementById('playerClass').value.trim();
+  document.getElementById('startBtn').disabled = !(n && c);
+}
+function openGate(){
+  document.getElementById('playerName').value = '';
+  document.getElementById('playerClass').selectedIndex = 0;
+  document.getElementById('startBtn').disabled = true;
+  document.getElementById('gateCancelBtn').style.display = currentName ? 'block' : 'none';
+  document.getElementById('gateOverlay').classList.add('open');
+  document.getElementById('playerName').focus();
+}
+function startGame(){
+  const n = document.getElementById('playerName').value.trim();
+  const c = document.getElementById('playerClass').value.trim();
+  if(!n || !c) return;
+  currentName = n.slice(0,20);
+  currentClass = c.slice(0,20);
+  updatePlayerLabel();
+  score = 0;
+  usedSet.clear();
+  savedThisRound = false;
+  rebuildGrid();
+  document.getElementById('gateOverlay').classList.remove('open');
+}
+function retryGame(){
+  if(savedThisRound) return;
+  if(!currentName){ openGate(); return; }
+  score = 0;
+  usedSet.clear();
+  rebuildGrid();
+}
+
+document.getElementById('playerName').addEventListener('input', validateGate);
+document.getElementById('playerClass').addEventListener('change', validateGate);
+document.getElementById('startBtn').addEventListener('click', startGame);
+document.getElementById('gateCancelBtn').addEventListener('click', () => {
+  document.getElementById('gateOverlay').classList.remove('open');
+});
+document.getElementById('playerName').addEventListener('keydown', (e) => {
+  if(e.key === 'Enter' && !document.getElementById('startBtn').disabled) startGame();
+});
+document.getElementById('closeBtn').addEventListener('click', () => {
+  document.getElementById('overlay').classList.remove('open');
+  rebuildGrid();
+  maybeShowFinish();
+});
+document.getElementById('resetBtn').addEventListener('click', openGate);
+document.getElementById('retryBtn').addEventListener('click', retryGame);
+document.getElementById('saveBtn').addEventListener('click', saveScore);
+function finishSaveHandler(){
+  saveScore().then(() => {
+    document.getElementById('finishSub').textContent = 'Score submitted to the leaderboard!';
+    const b = document.getElementById('finishSaveBtn');
+    b.textContent = 'New Player';
+    b.classList.remove('btn-gold');
+    b.classList.add('btn-ghost');
+    b.onclick = () => {
+      document.getElementById('finishOverlay').classList.remove('open');
+      openGate();
+    };
+    document.getElementById('finishCloseBtn').textContent = 'Close';
+  });
+}
+document.getElementById('finishCloseBtn').addEventListener('click', () => {
+  document.getElementById('finishOverlay').classList.remove('open');
+});
+
+rebuildGrid();
+loadLeaderboard();
+
+if(useCloud){
+  setInterval(loadLeaderboard, 15000);
+}
+
+</script>
+</body>
+</html>
+ + q.value;
+    feedback.className = 'feedback correct-text';
+  } else {
+    el.classList.add('wrong');
+    if(right >= 0) Array.from(container.children)[right].classList.add('correct');
+    score -= q.value;
+    feedback.textContent = 'Not quite. -
+
+
+function updatePlayerLabel(){
+  const el = document.getElementById('currentPlayerLabel');
+  el.innerHTML = '';
+  el.appendChild(document.createTextNode(currentName || '\u2014'));
+  if(currentClass){
+    const c = document.createElement('span');
+    c.className = 'pt-class';
+    c.textContent = '  \u00b7  ' + currentClass;
+    el.appendChild(c);
+  }
+}
+function validateGate(){
+  const n = document.getElementById('playerName').value.trim();
+  const c = document.getElementById('playerClass').value.trim();
+  document.getElementById('startBtn').disabled = !(n && c);
+}
+function openGate(){
+  document.getElementById('playerName').value = '';
+  document.getElementById('playerClass').selectedIndex = 0;
+  document.getElementById('startBtn').disabled = true;
+  document.getElementById('gateCancelBtn').style.display = currentName ? 'block' : 'none';
+  document.getElementById('gateOverlay').classList.add('open');
+  document.getElementById('playerName').focus();
+}
+function startGame(){
+  const n = document.getElementById('playerName').value.trim();
+  const c = document.getElementById('playerClass').value.trim();
+  if(!n || !c) return;
+  currentName = n.slice(0,20);
+  currentClass = c.slice(0,20);
+  updatePlayerLabel();
+  score = 0;
+  usedSet.clear();
+  savedThisRound = false;
+  rebuildGrid();
+  document.getElementById('gateOverlay').classList.remove('open');
+}
+function retryGame(){
+  if(savedThisRound) return;
+  if(!currentName){ openGate(); return; }
+  score = 0;
+  usedSet.clear();
+  rebuildGrid();
+}
+
+document.getElementById('playerName').addEventListener('input', validateGate);
+document.getElementById('playerClass').addEventListener('change', validateGate);
+document.getElementById('startBtn').addEventListener('click', startGame);
+document.getElementById('gateCancelBtn').addEventListener('click', () => {
+  document.getElementById('gateOverlay').classList.remove('open');
+});
+document.getElementById('playerName').addEventListener('keydown', (e) => {
+  if(e.key === 'Enter' && !document.getElementById('startBtn').disabled) startGame();
+});
+document.getElementById('closeBtn').addEventListener('click', () => {
+  document.getElementById('overlay').classList.remove('open');
+  rebuildGrid();
+  maybeShowFinish();
+});
+document.getElementById('resetBtn').addEventListener('click', openGate);
+document.getElementById('retryBtn').addEventListener('click', retryGame);
+document.getElementById('saveBtn').addEventListener('click', saveScore);
+function finishSaveHandler(){
+  saveScore().then(() => {
+    document.getElementById('finishSub').textContent = 'Score submitted to the leaderboard!';
+    const b = document.getElementById('finishSaveBtn');
+    b.textContent = 'New Player';
+    b.classList.remove('btn-gold');
+    b.classList.add('btn-ghost');
+    b.onclick = () => {
+      document.getElementById('finishOverlay').classList.remove('open');
+      openGate();
+    };
+    document.getElementById('finishCloseBtn').textContent = 'Close';
+  });
+}
+document.getElementById('finishCloseBtn').addEventListener('click', () => {
+  document.getElementById('finishOverlay').classList.remove('open');
+});
+
+rebuildGrid();
+loadLeaderboard();
+
+if(useCloud){
+  setInterval(loadLeaderboard, 15000);
+}
+
+</script>
+</body>
+</html>
+ + q.value;
+    feedback.className = 'feedback wrong-text';
+  }
+  usedSet.add(currentKey);
+  document.getElementById('closeBtn').disabled = false;
+}
+
 
 function updatePlayerLabel(){
   const el = document.getElementById('currentPlayerLabel');

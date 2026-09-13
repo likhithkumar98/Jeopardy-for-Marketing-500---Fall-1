@@ -360,82 +360,157 @@ margin: 6px 0 4px; font-variant-numeric: tabular-nums;
 
 <script>
 const DATA = [
-  {
-    category: "Integrated Marketing Communications",
-    questions: [
-      { value:100, q:"Integrated marketing communications (IMC) is best defined as:",
-        options:["Coordinating all promotional tools so they deliver a clear, consistent, and compelling message about an organization and its products","Using only one promotional tool at a time","A company's internal accounting process","Setting prices independently of any promotional strategy"], correct:0 },
-      { value:200, q:"The main goal of IMC is to:",
-        options:["Confuse customers with mixed brand messages","Ensure all communication channels work together to reinforce a unified brand message","Eliminate the need for advertising","Focus exclusively on personal selling"], correct:1 },
-      { value:300, q:"Which of the following is typically part of the promotion mix coordinated under IMC?",
-        options:["Only product packaging","Only distribution channels","Advertising, sales promotion, public relations, personal selling, and direct marketing","Only pricing strategy"], correct:2 },
-      { value:400, q:"A key challenge of implementing IMC is:",
-        options:["It requires using only a single communication channel","It has no impact on brand perception","It never needs cross-department coordination","Coordinating multiple departments and agencies to deliver one consistent message"], correct:3 },
-      { value:500, q:"IMC is important because inconsistent messaging across channels can:",
-        options:["Confuse customers and weaken brand image","Always increase sales regardless of message clarity","Have no effect on customer perception","Guarantee higher customer loyalty"], correct:0 }
-    ]
-  },
-  {
-    category: "Advertising, Promotion, PR & Personal Selling",
-    questions: [
-      { value:100, q:"Personal selling is best described as:",
-        options:["Mass, non-personal communication through paid media","Direct, personal presentation by a company's sales force to make sales and build customer relationships","A short-term discount offered at checkout","Free media coverage of a company"], correct:1 },
-      { value:200, q:"Sales management involves:",
-        options:["Only creating television advertisements","Setting product prices exclusively","Planning, directing, and controlling personal selling activities, including recruiting, training, and motivating a sales force","Managing a company's supply chain"], correct:2 },
-      { value:300, q:"A sales promotion such as a limited-time discount is designed to:",
-        options:["Build long-term brand image exclusively","Replace the need for a sales force entirely","Generate free publicity only","Stimulate quicker or greater purchase of a product"], correct:3 },
-      { value:400, q:"Public relations activities such as press releases and events are used to:",
-        options:["Build and maintain a favorable public image for the organization","Directly close individual sales","Set retail prices","Manage a company's inventory levels"], correct:0 },
-      { value:500, q:"Compared to advertising, personal selling generally offers:",
-        options:["Lower cost per customer contact for mass audiences","More opportunity for direct, personalized interaction and immediate feedback","No ability to tailor a message to an individual customer","A completely non-personal customer experience"], correct:1 }
-    ]
-  },
-  {
-    category: "Customer Metrics",
-    questions: [
-      { value:100, q:"Customer churn refers to:",
-        options:["The number of new customers acquired each month","A company's total revenue","The rate at which customers stop doing business with a company over a given period","The average price customers pay for a product"], correct:2 },
-      { value:200, q:"Expansion revenue refers to revenue generated from:",
-        options:["Brand-new customers only","One-time discounted sales","Refunds issued to unhappy customers","Existing customers who upgrade, purchase additional products, or expand their usage"], correct:3 },
-      { value:300, q:"Net Promoter Score (NPS) is a metric used to measure:",
-        options:["Customer loyalty and the likelihood that customers will recommend a company to others","A company's total annual profit","The number of employees in the marketing department","Website loading speed"], correct:0 },
-      { value:400, q:"A high customer churn rate typically signals that a company should:",
-        options:["Ignore the issue since churn has no business impact","Investigate causes of dissatisfaction and improve retention efforts","Immediately raise prices for all customers","Stop measuring customer satisfaction altogether"], correct:1 },
-      { value:500, q:"Tracking customer satisfaction over time helps a company:",
-        options:["Avoid ever changing its products or services","Eliminate the need for customer feedback","Identify trends and address problems before they lead to increased churn","Set employee salaries"], correct:2 }
-    ]
-  },
-  {
-    category: "Digital Marketing Channels & Techniques",
-    questions: [
-      { value:100, q:"Search engine optimization (SEO) involves:",
-        options:["Paying for every single website visitor","Sending unsolicited emails to random addresses","Placing ads exclusively on social media","Improving a website's visibility in organic (unpaid) search engine results"], correct:3 },
-      { value:200, q:"Pay-per-click (PPC) advertising is a model in which advertisers:",
-        options:["Pay a fee each time a user clicks on one of their ads","Pay a flat fee regardless of ad performance","Never pay for advertising placement","Only pay for print advertisements"], correct:0 },
-      { value:300, q:"One noted advantage of digital display advertising is that it:",
-        options:["Cannot be targeted to specific audiences","Can use visually engaging formats to build brand awareness across many websites","Is always more effective than search advertising","Requires no design or creative work"], correct:1 },
-      { value:400, q:"One noted disadvantage of digital display advertising is:",
-        options:["It is impossible to measure performance","It cannot include images or graphics","Banner blindness, where users learn to ignore display ads, reducing effectiveness","It only works for physical retail businesses"], correct:2 },
-      { value:500, q:"Mobile marketing refers to marketing activities that:",
-        options:["Only occur through desktop computers","Ignore consumers' use of smartphones","Are limited exclusively to print media","Reach consumers through smartphones and other mobile devices, such as via apps, SMS, or mobile-optimized ads"], correct:3 }
-    ]
-  },
-  {
-    category: "Digital Marketing Skills & Ecosystem",
-    questions: [
-      { value:100, q:"Hard skills in digital marketing typically include:",
-        options:["Technical abilities such as SEO, analytics tools, and paid advertising platform management","Only interpersonal communication skills","Only creativity with no technical component","Physical strength and manual labor skills"], correct:0 },
-      { value:200, q:"Soft skills in digital marketing include abilities such as:",
-        options:["Coding and web development exclusively","Communication, adaptability, and creative problem-solving","Only spreadsheet formulas","Server maintenance"], correct:1 },
-      { value:300, q:"The digital marketing ecosystem refers to:",
-        options:["A single isolated marketing channel with no interaction with others","Only a company's website","The interconnected network of channels, platforms, and tools (SEO, social, email, paid ads, etc.) that work together in a marketing strategy","A company's physical retail locations only"], correct:2 },
-      { value:400, q:"Email marketing remains a valuable digital channel because it allows companies to:",
-        options:["Reach only anonymous, untargeted audiences","Avoid any measurement of open or click rates","Communicate exclusively through physical mail","Send personalized, targeted messages directly to an interested subscriber base"], correct:3 },
-      { value:500, q:"The 'bottom line' takeaway about digital marketing skills is generally that successful digital marketers need:",
-        options:["A combination of both technical (hard) skills and interpersonal (soft) skills","Only technical skills, with no need for communication ability","Only creative skills, with no need for data or analytics knowledge","No specific skill set at all"], correct:0 }
-    ]
-  }
+{
+category: "Integrated Marketing Communications",
+questions: [
+{ value:100, q:"Integrated marketing communications (IMC) is best defined as:",
+options:["A company's internal accounting process","Setting prices independently of any promotional strategy","Using only one promotional tool at a time","Coordinating all promotional tools so they deliver a clear, consistent, and compelling message about an organization and its products"], k:"hJX_Xb2EIm1gighLCs6bD7" },
+{ value:200, q:"The main goal of IMC is to:",
+options:["Eliminate the need for advertising","Focus exclusively on personal selling","Ensure all communication channels work together to reinforce a unified brand message","Confuse customers with mixed brand messages"], k:"RnHpAQRZ6xrBf7v_KqDxeq" },
+{ value:300, q:"Which of the following is typically part of the promotion mix coordinated under IMC?",
+options:["Only pricing strategy","Only product packaging","Only distribution channels","Advertising, sales promotion, public relations, personal selling, and direct marketing"], k:"TrU73JcpGfR637IO8Ydo9X" },
+{ value:400, q:"A key challenge of implementing IMC is:",
+options:["It has no impact on brand perception","Coordinating multiple departments and agencies to deliver one consistent message","It never needs cross-department coordination","It requires using only a single communication channel"], k:"7CSdwp45Rat7ehki0kjf26" },
+{ value:500, q:"IMC is important because inconsistent messaging across channels can:",
+options:["Guarantee higher customer loyalty","Have no effect on customer perception","Always increase sales regardless of message clarity","Confuse customers and weaken brand image"], k:"LBeuIngRI4cGONwJmUTbTn" }
+]
+},
+{
+category: "Advertising, Promotion, PR & Personal Selling",
+questions: [
+{ value:100, q:"Personal selling is best described as:",
+options:["Free media coverage of a company","Direct, personal presentation by a company's sales force to make sales and build customer relationships","A short-term discount offered at checkout","Mass, non-personal communication through paid media"], k:"kWe41kTXoXFTkvENGhV5TP" },
+{ value:200, q:"Sales management involves:",
+options:["Planning, directing, and controlling personal selling activities, including recruiting, training, and motivating a sales force","Managing a company's supply chain","Setting product prices exclusively","Only creating television advertisements"], k:"xdOOlDVwgVG2vMa_jSoNKp" },
+{ value:300, q:"A sales promotion such as a limited-time discount is designed to:",
+options:["Stimulate quicker or greater purchase of a product","Replace the need for a sales force entirely","Build long-term brand image exclusively","Generate free publicity only"], k:"Srn1Z9b-t2SDn90lryCp34" },
+{ value:400, q:"Public relations activities such as press releases and events are used to:",
+options:["Build and maintain a favorable public image for the organization","Directly close individual sales","Manage a company's inventory levels","Set retail prices"], k:"orgYqtabwyWsukm7FQcb72" },
+{ value:500, q:"Compared to advertising, personal selling generally offers:",
+options:["More opportunity for direct, personalized interaction and immediate feedback","A completely non-personal customer experience","No ability to tailor a message to an individual customer","Lower cost per customer contact for mass audiences"], k:"WrYNVfg6Zxe2NWYiKmv71l" }
+]
+},
+{
+category: "Customer Metrics",
+questions: [
+{ value:100, q:"Customer churn refers to:",
+options:["A company's total revenue","The rate at which customers stop doing business with a company over a given period","The average price customers pay for a product","The number of new customers acquired each month"], k:"0qNzOKRWGhbMWh0KKgOPwy" },
+{ value:200, q:"Expansion revenue refers to revenue generated from:",
+options:["Refunds issued to unhappy customers","Existing customers who upgrade, purchase additional products, or expand their usage","One-time discounted sales","Brand-new customers only"], k:"y_K8Dn1qmoC60ca9g9Fh7E" },
+{ value:300, q:"Net Promoter Score (NPS) is a metric used to measure:",
+options:["The number of employees in the marketing department","Customer loyalty and the likelihood that customers will recommend a company to others","A company's total annual profit","Website loading speed"], k:"nWc91T96n9IggtJ0On8dUt" },
+{ value:400, q:"A high customer churn rate typically signals that a company should:",
+options:["Ignore the issue since churn has no business impact","Investigate causes of dissatisfaction and improve retention efforts","Stop measuring customer satisfaction altogether","Immediately raise prices for all customers"], k:"Ayq2YRM-xiwNq-4VIxUrb1" },
+{ value:500, q:"Tracking customer satisfaction over time helps a company:",
+options:["Eliminate the need for customer feedback","Avoid ever changing its products or services","Set employee salaries","Identify trends and address problems before they lead to increased churn"], k:"abL4-3tfJjHZlftrOG5xM7" }
+]
+},
+{
+category: "Digital Marketing Channels & Techniques",
+questions: [
+{ value:100, q:"Search engine optimization (SEO) involves:",
+options:["Sending unsolicited emails to random addresses","Paying for every single website visitor","Placing ads exclusively on social media","Improving a website's visibility in organic (unpaid) search engine results"], k:"jRR-tF7qHGMZUJMLEWL97m" },
+{ value:200, q:"Pay-per-click (PPC) advertising is a model in which advertisers:",
+options:["Pay a flat fee regardless of ad performance","Only pay for print advertisements","Never pay for advertising placement","Pay a fee each time a user clicks on one of their ads"], k:"BqQWQDHdOVLkN1IaqZws2P" },
+{ value:300, q:"One noted advantage of digital display advertising is that it:",
+options:["Can use visually engaging formats to build brand awareness across many websites","Is always more effective than search advertising","Requires no design or creative work","Cannot be targeted to specific audiences"], k:"JiXFVNQiUo1vaRatd58DJm" },
+{ value:400, q:"One noted disadvantage of digital display advertising is:",
+options:["It only works for physical retail businesses","Banner blindness, where users learn to ignore display ads, reducing effectiveness","It cannot include images or graphics","It is impossible to measure performance"], k:"YZjU4JYlR3oWiHVg_3TxAB" },
+{ value:500, q:"Mobile marketing refers to marketing activities that:",
+options:["Ignore consumers' use of smartphones","Are limited exclusively to print media","Reach consumers through smartphones and other mobile devices, such as via apps, SMS, or mobile-optimized ads","Only occur through desktop computers"], k:"PvsVpfBUc6TIwlw1wJacMI" }
+]
+},
+{
+category: "Digital Marketing Skills & Ecosystem",
+questions: [
+{ value:100, q:"Hard skills in digital marketing typically include:",
+options:["Technical abilities such as SEO, analytics tools, and paid advertising platform management","Only interpersonal communication skills","Only creativity with no technical component","Physical strength and manual labor skills"], k:"88QuvyN2_lj1-B-DORL_OI" },
+{ value:200, q:"Soft skills in digital marketing include abilities such as:",
+options:["Coding and web development exclusively","Only spreadsheet formulas","Communication, adaptability, and creative problem-solving","Server maintenance"], k:"91ceS-1bmcFfdg-mmGk0QR" },
+{ value:300, q:"The digital marketing ecosystem refers to:",
+options:["A company's physical retail locations only","A single isolated marketing channel with no interaction with others","Only a company's website","The interconnected network of channels, platforms, and tools (SEO, social, email, paid ads, etc.) that work together in a marketing strategy"], k:"jlxO-kmGEKKB5VkHHLnINF" },
+{ value:400, q:"Email marketing remains a valuable digital channel because it allows companies to:",
+options:["Communicate exclusively through physical mail","Avoid any measurement of open or click rates","Reach only anonymous, untargeted audiences","Send personalized, targeted messages directly to an interested subscriber base"], k:"8CkeMqzuDD56u9F2c_Mvlx" },
+{ value:500, q:"The 'bottom line' takeaway about digital marketing skills is generally that successful digital marketers need:",
+options:["Only creative skills, with no need for data or analytics knowledge","Only technical skills, with no need for communication ability","A combination of both technical (hard) skills and interpersonal (soft) skills","No specific skill set at all"], k:"nFiUyvxxr0U_DCA2sF8T7m" }
+]
+}
 ];
+
+const _SALT = "MKT500-Jeopardy-v1";
+function _sha256b64url(str){
+  function rotr(n,x){return (x>>>n)|(x<<(32-n));}
+  function toWords(bytes){
+    const w=[];
+    for(let i=0;i<bytes.length;i+=4) w.push(((bytes[i]<<24)|(bytes[i+1]<<16)|(bytes[i+2]<<8)|bytes[i+3])>>>0);
+    return w;
+  }
+  const enc=new TextEncoder().encode(str);
+  const l=enc.length;
+  const bitLen=l*8;
+  const withOne=l+1;
+  const padLen=((withOne%64<=56)?56:120)-(withOne%64);
+  const total=withOne+padLen+8;
+  const bytes=new Uint8Array(total);
+  bytes.set(enc); bytes[l]=0x80;
+  const dv=new DataView(bytes.buffer);
+  // length as 64-bit big-endian (we only need low 32 for short strings)
+  dv.setUint32(total-4, bitLen>>>0, false);
+  const K=[
+  0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5,0x3956c25b,0x59f111f1,0x923f82a4,0xab1c5ed5,
+  0xd807aa98,0x12835b01,0x243185be,0x550c7dc3,0x72be5d74,0x80deb1fe,0x9bdc06a7,0xc19bf174,
+  0xe49b69c1,0xefbe4786,0x0fc19dc6,0x240ca1cc,0x2de92c6f,0x4a7484aa,0x5cb0a9dc,0x76f988da,
+  0x983e5152,0xa831c66d,0xb00327c8,0xbf597fc7,0xc6e00bf3,0xd5a79147,0x06ca6351,0x14292967,
+  0x27b70a85,0x2e1b2138,0x4d2c6dfc,0x53380d13,0x650a7354,0x766a0abb,0x81c2c92e,0x92722c85,
+  0xa2bfe8a1,0xa81a664b,0xc24b8b70,0xc76c51a3,0xd192e819,0xd6990624,0xf40e3585,0x106aa070,
+  0x19a4c116,0x1e376c08,0x2748774c,0x34b0bcb5,0x391c0cb3,0x4ed8aa4a,0x5b9cca4f,0x682e6ff3,
+  0x748f82ee,0x78a5636f,0x84c87814,0x8cc70208,0x90befffa,0xa4506ceb,0xbef9a3f7,0xc67178f2];
+  let H0=0x6a09e667,H1=0xbb67ae85,H2=0x3c6ef372,H3=0xa54ff53a,H4=0x510e527f,H5=0x9b05688c,H6=0x1f83d9ab,H7=0x5be0cd19;
+  for(let i=0;i<bytes.length;i+=64){
+    const w=new Array(64);
+    for(let j=0;j<16;j++) w[j]=dv.getUint32(i+j*4,false);
+    for(let j=16;j<64;j++){
+      const s0=rotr(7,w[j-15])^rotr(18,w[j-15])^(w[j-15]>>>3);
+      const s1=rotr(17,w[j-2])^rotr(19,w[j-2])^(w[j-2]>>>10);
+      w[j]=(w[j-16]+s0+w[j-7]+s1)>>>0;
+    }
+    let a=H0,b=H1,c=H2,d=H3,e=H4,f=H5,g=H6,h=H7;
+    for(let j=0;j<64;j++){
+      const S1=rotr(6,e)^rotr(11,e)^rotr(25,e);
+      const ch=(e&f)^((~e)&g);
+      const t1=(h+S1+ch+K[j]+w[j])>>>0;
+      const S0=rotr(2,a)^rotr(13,a)^rotr(22,a);
+      const maj=(a&b)^(a&c)^(b&c);
+      const t2=(S0+maj)>>>0;
+      h=g;g=f;f=e;e=(d+t1)>>>0;d=c;c=b;b=a;a=(t1+t2)>>>0;
+    }
+    H0=(H0+a)>>>0;H1=(H1+b)>>>0;H2=(H2+c)>>>0;H3=(H3+d)>>>0;
+    H4=(H4+e)>>>0;H5=(H5+f)>>>0;H6=(H6+g)>>>0;H7=(H7+h)>>>0;
+  }
+  const out=new Uint8Array(32);
+  const o=new DataView(out.buffer);
+  o.setUint32(0,H0);o.setUint32(4,H1);o.setUint32(8,H2);o.setUint32(12,H3);
+  o.setUint32(16,H4);o.setUint32(20,H5);o.setUint32(24,H6);o.setUint32(28,H7);
+  let s='';
+  const alphabet='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_';
+  for(let i=0;i<out.length;i+=3){
+    const x=(out[i]<<16)|((out[i+1]||0)<<8)|(out[i+2]||0);
+    s+=alphabet[(x>>18)&63]+alphabet[(x>>12)&63]+alphabet[(x>>6)&63]+alphabet[x&63];
+  }
+  return s.slice(0, Math.ceil(32*4/3)); // full base64url without pad trim later
+}
+function _tok(text){
+  return _sha256b64url(_SALT + '\0' + text).slice(0, 22);
+}
+function _isCorrect(optionText, token){
+  return _tok(optionText) === token;
+}
+function _correctIndex(q){
+  for(let i=0;i<q.options.length;i++){
+    if(_isCorrect(q.options[i], q.k)) return i;
+  }
+  return -1;
+}
 
 const TOTAL_CLUES = DATA.reduce((n,c)=> n + c.questions.length, 0);
 
@@ -620,14 +695,15 @@ function openModal(ci, qi){
 function selectAnswer(idx, q, el, container){
   Array.from(container.children).forEach(c => c.classList.add('locked'));
   const feedback = document.getElementById('modalFeedback');
-  if(idx === q.correct){
+  const right = _correctIndex(q);
+  if(idx === right){
     el.classList.add('correct');
     score += q.value;
     feedback.textContent = 'Correct! +$' + q.value;
     feedback.className = 'feedback correct-text';
   } else {
     el.classList.add('wrong');
-    Array.from(container.children)[q.correct].classList.add('correct');
+    if(right >= 0) Array.from(container.children)[right].classList.add('correct');
     score -= q.value;
     feedback.textContent = 'Not quite. -$' + q.value;
     feedback.className = 'feedback wrong-text';
@@ -651,6 +727,203 @@ function maybeShowFinish(){
     document.getElementById('finishOverlay').classList.add('open');
   }
 }
+
+function updatePlayerLabel(){
+  const el = document.getElementById('currentPlayerLabel');
+  el.innerHTML = '';
+  el.appendChild(document.createTextNode(currentName || '\u2014'));
+  if(currentClass){
+    const c = document.createElement('span');
+    c.className = 'pt-class';
+    c.textContent = '  \u00b7  ' + currentClass;
+    el.appendChild(c);
+  }
+}
+function validateGate(){
+  const n = document.getElementById('playerName').value.trim();
+  const c = document.getElementById('playerClass').value.trim();
+  document.getElementById('startBtn').disabled = !(n && c);
+}
+function openGate(){
+  document.getElementById('playerName').value = '';
+  document.getElementById('playerClass').selectedIndex = 0;
+  document.getElementById('startBtn').disabled = true;
+  document.getElementById('gateCancelBtn').style.display = currentName ? 'block' : 'none';
+  document.getElementById('gateOverlay').classList.add('open');
+  document.getElementById('playerName').focus();
+}
+function startGame(){
+  const n = document.getElementById('playerName').value.trim();
+  const c = document.getElementById('playerClass').value.trim();
+  if(!n || !c) return;
+  currentName = n.slice(0,20);
+  currentClass = c.slice(0,20);
+  updatePlayerLabel();
+  score = 0;
+  usedSet.clear();
+  savedThisRound = false;
+  rebuildGrid();
+  document.getElementById('gateOverlay').classList.remove('open');
+}
+function retryGame(){
+  if(savedThisRound) return;
+  if(!currentName){ openGate(); return; }
+  score = 0;
+  usedSet.clear();
+  rebuildGrid();
+}
+
+document.getElementById('playerName').addEventListener('input', validateGate);
+document.getElementById('playerClass').addEventListener('change', validateGate);
+document.getElementById('startBtn').addEventListener('click', startGame);
+document.getElementById('gateCancelBtn').addEventListener('click', () => {
+  document.getElementById('gateOverlay').classList.remove('open');
+});
+document.getElementById('playerName').addEventListener('keydown', (e) => {
+  if(e.key === 'Enter' && !document.getElementById('startBtn').disabled) startGame();
+});
+document.getElementById('closeBtn').addEventListener('click', () => {
+  document.getElementById('overlay').classList.remove('open');
+  rebuildGrid();
+  maybeShowFinish();
+});
+document.getElementById('resetBtn').addEventListener('click', openGate);
+document.getElementById('retryBtn').addEventListener('click', retryGame);
+document.getElementById('saveBtn').addEventListener('click', saveScore);
+function finishSaveHandler(){
+  saveScore().then(() => {
+    document.getElementById('finishSub').textContent = 'Score submitted to the leaderboard!';
+    const b = document.getElementById('finishSaveBtn');
+    b.textContent = 'New Player';
+    b.classList.remove('btn-gold');
+    b.classList.add('btn-ghost');
+    b.onclick = () => {
+      document.getElementById('finishOverlay').classList.remove('open');
+      openGate();
+    };
+    document.getElementById('finishCloseBtn').textContent = 'Close';
+  });
+}
+document.getElementById('finishCloseBtn').addEventListener('click', () => {
+  document.getElementById('finishOverlay').classList.remove('open');
+});
+
+rebuildGrid();
+loadLeaderboard();
+
+if(useCloud){
+  setInterval(loadLeaderboard, 15000);
+}
+
+</script>
+</body>
+</html>
+ + q.value;
+    feedback.className = 'feedback correct-text';
+  } else {
+    el.classList.add('wrong');
+    if(right >= 0) Array.from(container.children)[right].classList.add('correct');
+    score -= q.value;
+    feedback.textContent = 'Not quite. -
+
+
+function updatePlayerLabel(){
+  const el = document.getElementById('currentPlayerLabel');
+  el.innerHTML = '';
+  el.appendChild(document.createTextNode(currentName || '\u2014'));
+  if(currentClass){
+    const c = document.createElement('span');
+    c.className = 'pt-class';
+    c.textContent = '  \u00b7  ' + currentClass;
+    el.appendChild(c);
+  }
+}
+function validateGate(){
+  const n = document.getElementById('playerName').value.trim();
+  const c = document.getElementById('playerClass').value.trim();
+  document.getElementById('startBtn').disabled = !(n && c);
+}
+function openGate(){
+  document.getElementById('playerName').value = '';
+  document.getElementById('playerClass').selectedIndex = 0;
+  document.getElementById('startBtn').disabled = true;
+  document.getElementById('gateCancelBtn').style.display = currentName ? 'block' : 'none';
+  document.getElementById('gateOverlay').classList.add('open');
+  document.getElementById('playerName').focus();
+}
+function startGame(){
+  const n = document.getElementById('playerName').value.trim();
+  const c = document.getElementById('playerClass').value.trim();
+  if(!n || !c) return;
+  currentName = n.slice(0,20);
+  currentClass = c.slice(0,20);
+  updatePlayerLabel();
+  score = 0;
+  usedSet.clear();
+  savedThisRound = false;
+  rebuildGrid();
+  document.getElementById('gateOverlay').classList.remove('open');
+}
+function retryGame(){
+  if(savedThisRound) return;
+  if(!currentName){ openGate(); return; }
+  score = 0;
+  usedSet.clear();
+  rebuildGrid();
+}
+
+document.getElementById('playerName').addEventListener('input', validateGate);
+document.getElementById('playerClass').addEventListener('change', validateGate);
+document.getElementById('startBtn').addEventListener('click', startGame);
+document.getElementById('gateCancelBtn').addEventListener('click', () => {
+  document.getElementById('gateOverlay').classList.remove('open');
+});
+document.getElementById('playerName').addEventListener('keydown', (e) => {
+  if(e.key === 'Enter' && !document.getElementById('startBtn').disabled) startGame();
+});
+document.getElementById('closeBtn').addEventListener('click', () => {
+  document.getElementById('overlay').classList.remove('open');
+  rebuildGrid();
+  maybeShowFinish();
+});
+document.getElementById('resetBtn').addEventListener('click', openGate);
+document.getElementById('retryBtn').addEventListener('click', retryGame);
+document.getElementById('saveBtn').addEventListener('click', saveScore);
+function finishSaveHandler(){
+  saveScore().then(() => {
+    document.getElementById('finishSub').textContent = 'Score submitted to the leaderboard!';
+    const b = document.getElementById('finishSaveBtn');
+    b.textContent = 'New Player';
+    b.classList.remove('btn-gold');
+    b.classList.add('btn-ghost');
+    b.onclick = () => {
+      document.getElementById('finishOverlay').classList.remove('open');
+      openGate();
+    };
+    document.getElementById('finishCloseBtn').textContent = 'Close';
+  });
+}
+document.getElementById('finishCloseBtn').addEventListener('click', () => {
+  document.getElementById('finishOverlay').classList.remove('open');
+});
+
+rebuildGrid();
+loadLeaderboard();
+
+if(useCloud){
+  setInterval(loadLeaderboard, 15000);
+}
+
+</script>
+</body>
+</html>
+ + q.value;
+    feedback.className = 'feedback wrong-text';
+  }
+  usedSet.add(currentKey);
+  document.getElementById('closeBtn').disabled = false;
+}
+
 
 function updatePlayerLabel(){
   const el = document.getElementById('currentPlayerLabel');

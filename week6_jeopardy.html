@@ -360,82 +360,157 @@ margin: 6px 0 4px; font-variant-numeric: tabular-nums;
 
 <script>
 const DATA = [
-  {
-    category: "Consumer & Buyer Behavior",
-    questions: [
-      { value:100, q:"Consumer buyer behavior refers to:",
-        options:["The buying behavior of final consumers who purchase goods and services for personal consumption","Only the behavior of retail store employees","A company's internal purchasing department","The process of manufacturing a product"], correct:0 },
-      { value:200, q:"Which of the following is a cultural factor influencing consumer behavior?",
-        options:["A person's age and life-cycle stage","Social class and subculture","Family purchasing roles only","A person's personality traits"], correct:1 },
-      { value:300, q:"The consumer buying decision process typically begins with:",
-        options:["Purchase decision","Post-purchase evaluation","Problem or need recognition","Information search"], correct:2 },
-      { value:400, q:"Cognitive dissonance in consumer behavior refers to:",
-        options:["The initial excitement felt before a purchase","A consumer's loyalty to a single brand","The process of comparing brands before buying","Post-purchase discomfort caused by doubt about whether the right choice was made"], correct:3 },
-      { value:500, q:"Which of the following is a personal factor that influences buyer behavior?",
-        options:["Age, occupation, and lifestyle","Reference groups","Culture and subculture","Social class"], correct:0 }
-    ]
-  },
-  {
-    category: "Product Life Cycle Stages",
-    questions: [
-      { value:100, q:"The four main stages of the product life cycle are:",
-        options:["Research, testing, launch, and recall","Introduction, growth, maturity, and decline","Planning, budgeting, forecasting, and reporting","Awareness, interest, desire, and action"], correct:1 },
-      { value:200, q:"During the introduction stage of the product life cycle, a company typically experiences:",
-        options:["Peak profits","Declining sales and shrinking competition","Slow sales growth and low or negative profits due to high launch costs","Maximum market saturation"], correct:2 },
-      { value:300, q:"The growth stage of the product life cycle is characterized by:",
-        options:["Sales beginning to decline sharply","Products being discontinued","No new competitors entering the market","Rapid market acceptance and increasing profits"], correct:3 },
-      { value:400, q:"In the maturity stage, sales growth typically:",
-        options:["Slows down as the product has already been adopted by most potential buyers","Increases at its fastest rate","Has not yet started","Is impossible to measure"], correct:0 },
-      { value:500, q:"In the decline stage of the product life cycle, a company might choose to:",
-        options:["Launch the product for the very first time","Reduce marketing support, harvest the product, or drop it from the line","Ignore falling sales indefinitely","Always increase prices dramatically"], correct:1 }
-    ]
-  },
-  {
-    category: "Innovation & Life Cycle",
-    questions: [
-      { value:100, q:"Product innovation can extend or restart a product's life cycle by:",
-        options:["Removing the product from all markets","Ignoring changing customer needs","Introducing new features, uses, or improvements that renew customer interest","Reducing product quality"], correct:2 },
-      { value:200, q:"According to the diffusion of innovation concept, 'early adopters' are consumers who:",
-        options:["Never purchase new products","Are the very last to try a new product","Only buy products after they become mainstream","Adopt new products relatively early, often serving as opinion leaders"], correct:3 },
-      { value:300, q:"Style, fashion, and fad are all examples of:",
-        options:["Different patterns a product life cycle can take","Types of pricing strategies","Distribution channel structures","Segmentation variables"], correct:0 },
-      { value:400, q:"A 'fad' in the product life cycle is best described as a trend that:",
-        options:["Grows slowly and steadily over many years","Is adopted quickly, generates high enthusiasm, then declines fast","Never experiences a decline","Applies only to industrial products"], correct:1 },
-      { value:500, q:"Companies often manage innovation across the life cycle by:",
-        options:["Launching only one product and never updating it","Avoiding any research and development spending","Continuously investing in R&D to introduce line extensions or next-generation products","Waiting until a product fully declines before considering changes"], correct:2 }
-    ]
-  },
-  {
-    category: "Demand Estimation & Forecasting",
-    questions: [
-      { value:100, q:"Estimating 'current market demand' involves determining:",
-        options:["Only what demand will be ten years from now","A guess with no supporting data","Demand for a product that does not yet exist","The total volume of a product that would be bought by a defined customer group in a defined time period and market"], correct:3 },
-      { value:200, q:"Forecasting future demand is important because it helps a company:",
-        options:["Plan production, staffing, and marketing efforts based on anticipated sales","Avoid ever measuring current demand","Eliminate the need for a marketing plan","Guarantee that sales will never decline"], correct:0 },
-      { value:300, q:"'What is said' as a method of gathering marketing research insight refers to:",
-        options:["Observing consumer actions without asking questions","Directly asking consumers about their attitudes, intentions, or opinions","Reviewing historical sales records only","Measuring product returns"], correct:1 },
-      { value:400, q:"'What is done' as a research approach refers to:",
-        options:["Reviewing what consumers plan to do in the future","Analyzing competitor financial statements","Observing consumers' actual current behavior, such as through experiments or observation","Predicting long-term industry trends"], correct:2 },
-      { value:500, q:"'What has been done' as a research approach refers to:",
-        options:["Speculating about undefined future demand","Ignoring past sales entirely","Interviewing consumers about hypothetical future purchases","Examining historical records, such as past sales and buying behavior, to identify patterns"], correct:3 }
-    ]
-  },
-  {
-    category: "Global Product Life Cycle",
-    questions: [
-      { value:100, q:"The international product life cycle theory suggests that a product's life cycle can:",
-        options:["Follow different stages or timing in different countries as it is introduced globally","Only ever occur in one country","Be identical in every market at the same time","Never apply to global markets"], correct:0 },
-      { value:200, q:"A product might be in the 'decline' stage in one country while being in the:",
-        options:["Same exact stage everywhere due to globalization","'Introduction' or 'growth' stage in another, less-developed or newly entered market","Only decline stage in every market simultaneously","Research and development stage forever"], correct:1 },
-      { value:300, q:"One reason companies extend a product's life cycle globally is to:",
-        options:["Avoid selling the product to any new customers","Immediately discontinue the product everywhere","Capture additional sales and profit in markets where the product is still in earlier life cycle stages","Reduce total company revenue"], correct:2 },
-      { value:400, q:"Cultural and economic differences across countries can cause a global product's life cycle to:",
-        options:["Be exactly the same length in every market","Never be affected by local factors","Only matter for digital products","Vary in length and shape depending on local adoption rates and conditions"], correct:3 },
-      { value:500, q:"A company managing a global product life cycle strategy must consider:",
-        options:["Local market readiness, competition, and consumer preferences when timing product launches","Only the company's home market conditions","Ignoring all foreign regulations","Using an identical marketing mix everywhere with no adaptation"], correct:0 }
-    ]
-  }
+{
+category: "Consumer & Buyer Behavior",
+questions: [
+{ value:100, q:"Consumer buyer behavior refers to:",
+options:["The process of manufacturing a product","Only the behavior of retail store employees","The buying behavior of final consumers who purchase goods and services for personal consumption","A company's internal purchasing department"], k:"e5OyiKF7MU6F0NXxXNNNE1" },
+{ value:200, q:"Which of the following is a cultural factor influencing consumer behavior?",
+options:["A person's personality traits","A person's age and life-cycle stage","Family purchasing roles only","Social class and subculture"], k:"Y1gVXtfxX00feXOrEI75m0" },
+{ value:300, q:"The consumer buying decision process typically begins with:",
+options:["Purchase decision","Problem or need recognition","Information search","Post-purchase evaluation"], k:"4RKvrWcmHQuMCxJuLqJTdg" },
+{ value:400, q:"Cognitive dissonance in consumer behavior refers to:",
+options:["Post-purchase discomfort caused by doubt about whether the right choice was made","The initial excitement felt before a purchase","The process of comparing brands before buying","A consumer's loyalty to a single brand"], k:"fLF42yF2suQjBHzDV2j6Y9" },
+{ value:500, q:"Which of the following is a personal factor that influences buyer behavior?",
+options:["Age, occupation, and lifestyle","Culture and subculture","Reference groups","Social class"], k:"E0AcOF8u7SPlHlxbithkUH" }
+]
+},
+{
+category: "Product Life Cycle Stages",
+questions: [
+{ value:100, q:"The four main stages of the product life cycle are:",
+options:["Awareness, interest, desire, and action","Planning, budgeting, forecasting, and reporting","Research, testing, launch, and recall","Introduction, growth, maturity, and decline"], k:"LKTUUUSwZ6bmLiB7izg7t4" },
+{ value:200, q:"During the introduction stage of the product life cycle, a company typically experiences:",
+options:["Peak profits","Slow sales growth and low or negative profits due to high launch costs","Declining sales and shrinking competition","Maximum market saturation"], k:"VkLR2_PuNx0WZDgc4yNyPb" },
+{ value:300, q:"The growth stage of the product life cycle is characterized by:",
+options:["Products being discontinued","Rapid market acceptance and increasing profits","No new competitors entering the market","Sales beginning to decline sharply"], k:"syDDgsHl7BjAXunRnIsaMM" },
+{ value:400, q:"In the maturity stage, sales growth typically:",
+options:["Increases at its fastest rate","Is impossible to measure","Slows down as the product has already been adopted by most potential buyers","Has not yet started"], k:"YQd9IgGSC4lOh8lb3eNsxt" },
+{ value:500, q:"In the decline stage of the product life cycle, a company might choose to:",
+options:["Launch the product for the very first time","Ignore falling sales indefinitely","Reduce marketing support, harvest the product, or drop it from the line","Always increase prices dramatically"], k:"txyqf3WKJjTEe9jpBs4XE6" }
+]
+},
+{
+category: "Innovation & Life Cycle",
+questions: [
+{ value:100, q:"Product innovation can extend or restart a product's life cycle by:",
+options:["Ignoring changing customer needs","Removing the product from all markets","Introducing new features, uses, or improvements that renew customer interest","Reducing product quality"], k:"Pt0bwo-fm9_8aiR1uoIlEN" },
+{ value:200, q:"According to the diffusion of innovation concept, 'early adopters' are consumers who:",
+options:["Never purchase new products","Adopt new products relatively early, often serving as opinion leaders","Only buy products after they become mainstream","Are the very last to try a new product"], k:"fMYeUDy4fZkwfiUxbyKql3" },
+{ value:300, q:"Style, fashion, and fad are all examples of:",
+options:["Types of pricing strategies","Segmentation variables","Distribution channel structures","Different patterns a product life cycle can take"], k:"s8UiQf9XNuk4V-nDv0IEDt" },
+{ value:400, q:"A 'fad' in the product life cycle is best described as a trend that:",
+options:["Grows slowly and steadily over many years","Applies only to industrial products","Never experiences a decline","Is adopted quickly, generates high enthusiasm, then declines fast"], k:"iF25ohP0wy3QvHzvwFjW31" },
+{ value:500, q:"Companies often manage innovation across the life cycle by:",
+options:["Avoiding any research and development spending","Waiting until a product fully declines before considering changes","Launching only one product and never updating it","Continuously investing in R&D to introduce line extensions or next-generation products"], k:"KCabN7Fukynwz_ednbPrZf" }
+]
+},
+{
+category: "Demand Estimation & Forecasting",
+questions: [
+{ value:100, q:"Estimating 'current market demand' involves determining:",
+options:["The total volume of a product that would be bought by a defined customer group in a defined time period and market","Only what demand will be ten years from now","Demand for a product that does not yet exist","A guess with no supporting data"], k:"KYSNLdYc80Qnde405BFuuz" },
+{ value:200, q:"Forecasting future demand is important because it helps a company:",
+options:["Plan production, staffing, and marketing efforts based on anticipated sales","Eliminate the need for a marketing plan","Guarantee that sales will never decline","Avoid ever measuring current demand"], k:"X7aoW4NmWUZygecbK7fYEF" },
+{ value:300, q:"'What is said' as a method of gathering marketing research insight refers to:",
+options:["Measuring product returns","Reviewing historical sales records only","Observing consumer actions without asking questions","Directly asking consumers about their attitudes, intentions, or opinions"], k:"OJLNcKVKUck3g2lx_ib4Ue" },
+{ value:400, q:"'What is done' as a research approach refers to:",
+options:["Observing consumers' actual current behavior, such as through experiments or observation","Predicting long-term industry trends","Reviewing what consumers plan to do in the future","Analyzing competitor financial statements"], k:"7BTf3eo95cHsa158gIjEKn" },
+{ value:500, q:"'What has been done' as a research approach refers to:",
+options:["Interviewing consumers about hypothetical future purchases","Speculating about undefined future demand","Ignoring past sales entirely","Examining historical records, such as past sales and buying behavior, to identify patterns"], k:"ZJ9gcnUGgq3CPzZQr0kce2" }
+]
+},
+{
+category: "Global Product Life Cycle",
+questions: [
+{ value:100, q:"The international product life cycle theory suggests that a product's life cycle can:",
+options:["Follow different stages or timing in different countries as it is introduced globally","Be identical in every market at the same time","Never apply to global markets","Only ever occur in one country"], k:"VSjRWZHnknHnzCDZWwaTrL" },
+{ value:200, q:"A product might be in the 'decline' stage in one country while being in the:",
+options:["Research and development stage forever","Same exact stage everywhere due to globalization","'Introduction' or 'growth' stage in another, less-developed or newly entered market","Only decline stage in every market simultaneously"], k:"QpgyOtwbekN8hCsD3pzGHT" },
+{ value:300, q:"One reason companies extend a product's life cycle globally is to:",
+options:["Capture additional sales and profit in markets where the product is still in earlier life cycle stages","Immediately discontinue the product everywhere","Avoid selling the product to any new customers","Reduce total company revenue"], k:"0DBsgFNLnXgHUvC-wKRELB" },
+{ value:400, q:"Cultural and economic differences across countries can cause a global product's life cycle to:",
+options:["Only matter for digital products","Vary in length and shape depending on local adoption rates and conditions","Be exactly the same length in every market","Never be affected by local factors"], k:"aRgoHGO2S0nlbHEsStphys" },
+{ value:500, q:"A company managing a global product life cycle strategy must consider:",
+options:["Ignoring all foreign regulations","Using an identical marketing mix everywhere with no adaptation","Local market readiness, competition, and consumer preferences when timing product launches","Only the company's home market conditions"], k:"Uumd_c0bxBqsVq8E9CS6CL" }
+]
+}
 ];
+
+const _SALT = "MKT500-Jeopardy-v1";
+function _sha256b64url(str){
+  function rotr(n,x){return (x>>>n)|(x<<(32-n));}
+  function toWords(bytes){
+    const w=[];
+    for(let i=0;i<bytes.length;i+=4) w.push(((bytes[i]<<24)|(bytes[i+1]<<16)|(bytes[i+2]<<8)|bytes[i+3])>>>0);
+    return w;
+  }
+  const enc=new TextEncoder().encode(str);
+  const l=enc.length;
+  const bitLen=l*8;
+  const withOne=l+1;
+  const padLen=((withOne%64<=56)?56:120)-(withOne%64);
+  const total=withOne+padLen+8;
+  const bytes=new Uint8Array(total);
+  bytes.set(enc); bytes[l]=0x80;
+  const dv=new DataView(bytes.buffer);
+  // length as 64-bit big-endian (we only need low 32 for short strings)
+  dv.setUint32(total-4, bitLen>>>0, false);
+  const K=[
+  0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5,0x3956c25b,0x59f111f1,0x923f82a4,0xab1c5ed5,
+  0xd807aa98,0x12835b01,0x243185be,0x550c7dc3,0x72be5d74,0x80deb1fe,0x9bdc06a7,0xc19bf174,
+  0xe49b69c1,0xefbe4786,0x0fc19dc6,0x240ca1cc,0x2de92c6f,0x4a7484aa,0x5cb0a9dc,0x76f988da,
+  0x983e5152,0xa831c66d,0xb00327c8,0xbf597fc7,0xc6e00bf3,0xd5a79147,0x06ca6351,0x14292967,
+  0x27b70a85,0x2e1b2138,0x4d2c6dfc,0x53380d13,0x650a7354,0x766a0abb,0x81c2c92e,0x92722c85,
+  0xa2bfe8a1,0xa81a664b,0xc24b8b70,0xc76c51a3,0xd192e819,0xd6990624,0xf40e3585,0x106aa070,
+  0x19a4c116,0x1e376c08,0x2748774c,0x34b0bcb5,0x391c0cb3,0x4ed8aa4a,0x5b9cca4f,0x682e6ff3,
+  0x748f82ee,0x78a5636f,0x84c87814,0x8cc70208,0x90befffa,0xa4506ceb,0xbef9a3f7,0xc67178f2];
+  let H0=0x6a09e667,H1=0xbb67ae85,H2=0x3c6ef372,H3=0xa54ff53a,H4=0x510e527f,H5=0x9b05688c,H6=0x1f83d9ab,H7=0x5be0cd19;
+  for(let i=0;i<bytes.length;i+=64){
+    const w=new Array(64);
+    for(let j=0;j<16;j++) w[j]=dv.getUint32(i+j*4,false);
+    for(let j=16;j<64;j++){
+      const s0=rotr(7,w[j-15])^rotr(18,w[j-15])^(w[j-15]>>>3);
+      const s1=rotr(17,w[j-2])^rotr(19,w[j-2])^(w[j-2]>>>10);
+      w[j]=(w[j-16]+s0+w[j-7]+s1)>>>0;
+    }
+    let a=H0,b=H1,c=H2,d=H3,e=H4,f=H5,g=H6,h=H7;
+    for(let j=0;j<64;j++){
+      const S1=rotr(6,e)^rotr(11,e)^rotr(25,e);
+      const ch=(e&f)^((~e)&g);
+      const t1=(h+S1+ch+K[j]+w[j])>>>0;
+      const S0=rotr(2,a)^rotr(13,a)^rotr(22,a);
+      const maj=(a&b)^(a&c)^(b&c);
+      const t2=(S0+maj)>>>0;
+      h=g;g=f;f=e;e=(d+t1)>>>0;d=c;c=b;b=a;a=(t1+t2)>>>0;
+    }
+    H0=(H0+a)>>>0;H1=(H1+b)>>>0;H2=(H2+c)>>>0;H3=(H3+d)>>>0;
+    H4=(H4+e)>>>0;H5=(H5+f)>>>0;H6=(H6+g)>>>0;H7=(H7+h)>>>0;
+  }
+  const out=new Uint8Array(32);
+  const o=new DataView(out.buffer);
+  o.setUint32(0,H0);o.setUint32(4,H1);o.setUint32(8,H2);o.setUint32(12,H3);
+  o.setUint32(16,H4);o.setUint32(20,H5);o.setUint32(24,H6);o.setUint32(28,H7);
+  let s='';
+  const alphabet='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_';
+  for(let i=0;i<out.length;i+=3){
+    const x=(out[i]<<16)|((out[i+1]||0)<<8)|(out[i+2]||0);
+    s+=alphabet[(x>>18)&63]+alphabet[(x>>12)&63]+alphabet[(x>>6)&63]+alphabet[x&63];
+  }
+  return s.slice(0, Math.ceil(32*4/3)); // full base64url without pad trim later
+}
+function _tok(text){
+  return _sha256b64url(_SALT + '\0' + text).slice(0, 22);
+}
+function _isCorrect(optionText, token){
+  return _tok(optionText) === token;
+}
+function _correctIndex(q){
+  for(let i=0;i<q.options.length;i++){
+    if(_isCorrect(q.options[i], q.k)) return i;
+  }
+  return -1;
+}
 
 const TOTAL_CLUES = DATA.reduce((n,c)=> n + c.questions.length, 0);
 
@@ -620,14 +695,15 @@ function openModal(ci, qi){
 function selectAnswer(idx, q, el, container){
   Array.from(container.children).forEach(c => c.classList.add('locked'));
   const feedback = document.getElementById('modalFeedback');
-  if(idx === q.correct){
+  const right = _correctIndex(q);
+  if(idx === right){
     el.classList.add('correct');
     score += q.value;
     feedback.textContent = 'Correct! +$' + q.value;
     feedback.className = 'feedback correct-text';
   } else {
     el.classList.add('wrong');
-    Array.from(container.children)[q.correct].classList.add('correct');
+    if(right >= 0) Array.from(container.children)[right].classList.add('correct');
     score -= q.value;
     feedback.textContent = 'Not quite. -$' + q.value;
     feedback.className = 'feedback wrong-text';
@@ -651,6 +727,203 @@ function maybeShowFinish(){
     document.getElementById('finishOverlay').classList.add('open');
   }
 }
+
+function updatePlayerLabel(){
+  const el = document.getElementById('currentPlayerLabel');
+  el.innerHTML = '';
+  el.appendChild(document.createTextNode(currentName || '\u2014'));
+  if(currentClass){
+    const c = document.createElement('span');
+    c.className = 'pt-class';
+    c.textContent = '  \u00b7  ' + currentClass;
+    el.appendChild(c);
+  }
+}
+function validateGate(){
+  const n = document.getElementById('playerName').value.trim();
+  const c = document.getElementById('playerClass').value.trim();
+  document.getElementById('startBtn').disabled = !(n && c);
+}
+function openGate(){
+  document.getElementById('playerName').value = '';
+  document.getElementById('playerClass').selectedIndex = 0;
+  document.getElementById('startBtn').disabled = true;
+  document.getElementById('gateCancelBtn').style.display = currentName ? 'block' : 'none';
+  document.getElementById('gateOverlay').classList.add('open');
+  document.getElementById('playerName').focus();
+}
+function startGame(){
+  const n = document.getElementById('playerName').value.trim();
+  const c = document.getElementById('playerClass').value.trim();
+  if(!n || !c) return;
+  currentName = n.slice(0,20);
+  currentClass = c.slice(0,20);
+  updatePlayerLabel();
+  score = 0;
+  usedSet.clear();
+  savedThisRound = false;
+  rebuildGrid();
+  document.getElementById('gateOverlay').classList.remove('open');
+}
+function retryGame(){
+  if(savedThisRound) return;
+  if(!currentName){ openGate(); return; }
+  score = 0;
+  usedSet.clear();
+  rebuildGrid();
+}
+
+document.getElementById('playerName').addEventListener('input', validateGate);
+document.getElementById('playerClass').addEventListener('change', validateGate);
+document.getElementById('startBtn').addEventListener('click', startGame);
+document.getElementById('gateCancelBtn').addEventListener('click', () => {
+  document.getElementById('gateOverlay').classList.remove('open');
+});
+document.getElementById('playerName').addEventListener('keydown', (e) => {
+  if(e.key === 'Enter' && !document.getElementById('startBtn').disabled) startGame();
+});
+document.getElementById('closeBtn').addEventListener('click', () => {
+  document.getElementById('overlay').classList.remove('open');
+  rebuildGrid();
+  maybeShowFinish();
+});
+document.getElementById('resetBtn').addEventListener('click', openGate);
+document.getElementById('retryBtn').addEventListener('click', retryGame);
+document.getElementById('saveBtn').addEventListener('click', saveScore);
+function finishSaveHandler(){
+  saveScore().then(() => {
+    document.getElementById('finishSub').textContent = 'Score submitted to the leaderboard!';
+    const b = document.getElementById('finishSaveBtn');
+    b.textContent = 'New Player';
+    b.classList.remove('btn-gold');
+    b.classList.add('btn-ghost');
+    b.onclick = () => {
+      document.getElementById('finishOverlay').classList.remove('open');
+      openGate();
+    };
+    document.getElementById('finishCloseBtn').textContent = 'Close';
+  });
+}
+document.getElementById('finishCloseBtn').addEventListener('click', () => {
+  document.getElementById('finishOverlay').classList.remove('open');
+});
+
+rebuildGrid();
+loadLeaderboard();
+
+if(useCloud){
+  setInterval(loadLeaderboard, 15000);
+}
+
+</script>
+</body>
+</html>
+ + q.value;
+    feedback.className = 'feedback correct-text';
+  } else {
+    el.classList.add('wrong');
+    if(right >= 0) Array.from(container.children)[right].classList.add('correct');
+    score -= q.value;
+    feedback.textContent = 'Not quite. -
+
+
+function updatePlayerLabel(){
+  const el = document.getElementById('currentPlayerLabel');
+  el.innerHTML = '';
+  el.appendChild(document.createTextNode(currentName || '\u2014'));
+  if(currentClass){
+    const c = document.createElement('span');
+    c.className = 'pt-class';
+    c.textContent = '  \u00b7  ' + currentClass;
+    el.appendChild(c);
+  }
+}
+function validateGate(){
+  const n = document.getElementById('playerName').value.trim();
+  const c = document.getElementById('playerClass').value.trim();
+  document.getElementById('startBtn').disabled = !(n && c);
+}
+function openGate(){
+  document.getElementById('playerName').value = '';
+  document.getElementById('playerClass').selectedIndex = 0;
+  document.getElementById('startBtn').disabled = true;
+  document.getElementById('gateCancelBtn').style.display = currentName ? 'block' : 'none';
+  document.getElementById('gateOverlay').classList.add('open');
+  document.getElementById('playerName').focus();
+}
+function startGame(){
+  const n = document.getElementById('playerName').value.trim();
+  const c = document.getElementById('playerClass').value.trim();
+  if(!n || !c) return;
+  currentName = n.slice(0,20);
+  currentClass = c.slice(0,20);
+  updatePlayerLabel();
+  score = 0;
+  usedSet.clear();
+  savedThisRound = false;
+  rebuildGrid();
+  document.getElementById('gateOverlay').classList.remove('open');
+}
+function retryGame(){
+  if(savedThisRound) return;
+  if(!currentName){ openGate(); return; }
+  score = 0;
+  usedSet.clear();
+  rebuildGrid();
+}
+
+document.getElementById('playerName').addEventListener('input', validateGate);
+document.getElementById('playerClass').addEventListener('change', validateGate);
+document.getElementById('startBtn').addEventListener('click', startGame);
+document.getElementById('gateCancelBtn').addEventListener('click', () => {
+  document.getElementById('gateOverlay').classList.remove('open');
+});
+document.getElementById('playerName').addEventListener('keydown', (e) => {
+  if(e.key === 'Enter' && !document.getElementById('startBtn').disabled) startGame();
+});
+document.getElementById('closeBtn').addEventListener('click', () => {
+  document.getElementById('overlay').classList.remove('open');
+  rebuildGrid();
+  maybeShowFinish();
+});
+document.getElementById('resetBtn').addEventListener('click', openGate);
+document.getElementById('retryBtn').addEventListener('click', retryGame);
+document.getElementById('saveBtn').addEventListener('click', saveScore);
+function finishSaveHandler(){
+  saveScore().then(() => {
+    document.getElementById('finishSub').textContent = 'Score submitted to the leaderboard!';
+    const b = document.getElementById('finishSaveBtn');
+    b.textContent = 'New Player';
+    b.classList.remove('btn-gold');
+    b.classList.add('btn-ghost');
+    b.onclick = () => {
+      document.getElementById('finishOverlay').classList.remove('open');
+      openGate();
+    };
+    document.getElementById('finishCloseBtn').textContent = 'Close';
+  });
+}
+document.getElementById('finishCloseBtn').addEventListener('click', () => {
+  document.getElementById('finishOverlay').classList.remove('open');
+});
+
+rebuildGrid();
+loadLeaderboard();
+
+if(useCloud){
+  setInterval(loadLeaderboard, 15000);
+}
+
+</script>
+</body>
+</html>
+ + q.value;
+    feedback.className = 'feedback wrong-text';
+  }
+  usedSet.add(currentKey);
+  document.getElementById('closeBtn').disabled = false;
+}
+
 
 function updatePlayerLabel(){
   const el = document.getElementById('currentPlayerLabel');
